@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}BTT Program - Day 1{% endblock %}
+
+{% block content %}
+<div class="header-section text-center mb-4" style="border-bottom: 2px solid #ccc;">
+<img 
+    src="{% static 'belts/btt_logo.jpg' %}" 
+    alt="Brazilian Top Team Logo" 
+    style="max-width: 300px;"
+/>
+<h2 class="mt-3" style="color: #212ff0; font-weight: bold;"> <span style="color: #ff0000; font-weight: bold;">BTT CANADA - Fabio Holanda</span></h2>
+<h2 class="mt-3" style="color: #212ff0; font-weight: bold;"> <span style="color: #3b3737; font-weight: bold;">Belt Program</span></h2>
+<h4 style="color: #0a0303; font-weight: bold;">White to Blue Belt Curriculum - Day 1</h4>
+</div>
+
+<!-- Table of Techniques -->
+<table class="table table-striped">
+  <thead>
+    <tr style="background-color: #004080; color: #fff;">
+      <th style="width: 60px;">#</th>
+      <th>Technique</th>
+      <th>Description</th>
+      <th>Video</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for technique in techniques|dictsort:"pk" %}
+    <tr>
+      <td><strong>{{ forloop.counter }}</strong></td>
+      <td>{{ technique.name }}</td>
+      <td>{{ technique.description }}</td>
+      <td><a href="{{ technique.video_link }}" target="_blank">Watch Video</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

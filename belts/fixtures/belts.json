@@ -1,0 +1,56 @@
+[
+  {
+    "model": "belts.belt",
+    "pk": 1,
+    "fields": {
+      "name": "White"
+    }
+  },
+  {
+    "model": "belts.belt",
+    "pk": 2,
+    "fields": {
+      "name": "Blue"
+    }
+  },
+  {
+    "model": "belts.technique",
+    "pk": 1,
+    "fields": {
+      "belt": 1,
+      "name": "Breakfall Basics",
+      "description": "Learn how to safely breakfall backward and sideways.",
+      "video_link": "https://www.youtube.com/watch?v=EXAMPLE1"
+    }
+  },
+  {
+    "model": "belts.technique",
+    "pk": 2,
+    "fields": {
+      "belt": 1,
+      "name": "Hip Escape (Shrimp)",
+      "description": "Fundamental movement for guard retention and escapes.",
+      "video_link": "https://www.youtube.com/watch?v=EXAMPLE2"
+    }
+  },
+  {
+    "model": "belts.technique",
+    "pk": 3,
+    "fields": {
+      "belt": 1,
+      "name": "Bridge and Roll Escape (Trap & Roll)",
+      "description": "Basic mount escape by bridging and rolling your opponent.",
+      "video_link": "https://www.youtube.com/watch?v=EXAMPLE3"
+    }
+  },
+  {
+    "model": "belts.technique",
+    "pk": 4,
+    "fields": {
+      "belt": 1,
+      "name": "Guard Pass Fundamentals",
+      "description": "First pass from closed guard focusing on posture and base.",
+      "video_link": "https://www.youtube.com/watch?v=EXAMPLE4"
+    }
+  }
+]

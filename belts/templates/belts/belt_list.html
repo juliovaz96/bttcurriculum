@@ -1,0 +1,32 @@
+<!-- belts/templates/belts/belt_list.html -->
+{% extends 'base.html' %}
+
+{% block title %}Belt List{% endblock %}
+
+{% block content %}
+  <h1 class="my-3">BJJ Belt Levels</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Belt</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for belt in belts %}
+      <tr>
+        <td>{{ belt.name }}</td>
+        <td>
+          <a class="btn btn-primary btn-sm" href="{% url 'technique_list' belt.id %}">
+            View Techniques
+          </a>
+        </td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="2">No belts added yet.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
